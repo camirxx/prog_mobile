@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Inicio de Sesion
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Hola bienvenido</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+<div id="container">
+  <strong>Inicio de Sesion</strong><br>
+  <ion-list>
+    <ion-item>
+      <ion-textarea label="Usuario" placeholder="Coloque su nombre de Usuario"></ion-textarea> <br>
+    </ion-item>
+    <ion-item>
+      <ion-textarea label="Contraseña" placeholder="Coloque su Contraseña"></ion-textarea>
+      
+    </ion-item>
+  </ion-list>
+
+  
+   <!--BOTONES-->
+  <!--[routerLink]="['/RutaPagina']"-->
+  <ion-button [routerLink]="['/pagina1']">Logear</ion-button>
+</div>
+
+</ion-content>
