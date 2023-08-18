@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { NavigationExtras, Router } from '@angular/router';
 import { AlertController, ToastController } from '@ionic/angular';
 
 @Component({
@@ -29,7 +29,7 @@ export class HomePage {
     const alert = await this.alertController.create({
       header: 'Alert',
       subHeader: 'Mensaje Urgente',
-      message: 'te vas a morir!',
+      message: 'haz clik aqui!',
       buttons: ['Confirmar'],
     });
 
@@ -52,9 +52,20 @@ export class HomePage {
     console.log("Hola Mundo");
   }
 
+  
+
+
+
   irPagina1(){
-    this.presentAlert();
-    //this.presentToast('bottom');
-    this.router.navigate(['/pagina1']);
+    let navigationExtras: NavigationExtras = {
+      state: {
+        nombreEnviado: this.nombre,
+        edadEnviada: this.edad
+      }
+    }
+    //this.presentAlert();
+    this.presentToast('bottom');
+    this.router.navigate(['/pagina1'], navigationExtras);
   }
+  
 }
