@@ -22,8 +22,12 @@ export class HomePage {
     }
   ]
 
-  constructor(private router:Router, private alertController: AlertController, private toastController: ToastController) {}
-  
+  constructor(private router:Router, private alertController: AlertController, private toastController: ToastController) {
+    localStorage.setItem('token',this.nombre);
+  }
+    
+
+
   //alerta una en todo el proyecto
   async presentAlert() {
     const alert = await this.alertController.create({
